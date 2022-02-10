@@ -1,4 +1,4 @@
-const m = require('../lib/concessionaire-bill')
+import m from '../lib/concessionaire-bill.js'
 import {
     InvalidFieldError,
     InvalidVerificationDigitError,
@@ -95,4 +95,17 @@ describe('gets bill value', () => {
 })
 
 
+describe('gets bill info', () => {
+    it('gets info properly', () => {
+
+        let line = '836700000034019000481002341651627810001820454278'
+        expect(m.getBillInfo(line)).toStrictEqual({
+            barCode: '83670000003019000481003416516278100182045427',
+            amount: 301.9,
+            expirationDate: null
+          })
+
+
+    })
+})
 

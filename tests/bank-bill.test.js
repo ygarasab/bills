@@ -1,4 +1,4 @@
-const m = require('../lib/bank-bill')
+import m from '../lib/bank-bill.js'
 import {
     InvalidFieldError,
     InvalidVerificationDigitError,
